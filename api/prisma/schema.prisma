@@ -1,0 +1,50 @@
+generator client {
+  provider = "prisma-client-py"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+model Service {
+  id        String   @id @default(cuid())
+  name      String   @unique
+  createdAt DateTime @default(now())
+  metrics   Metric[]
+  alerts    Alert[]
+}
+
+model Metric {
+  id         String   @id @default(cuid())
+  serviceId  String
+  service    Service  @relation(fields: [serviceId], references: [id], onDelete: Cascade)
+
+  timestamp  DateTime @default(now())
+
+  cpu        Float
+  memory     Float
+  latencyMs  Float
+  errorRate  Float
+  uptimePct  Float
+
+  @@index([serviceId, timestamp])
+}
+
+model Alert {
+  id        String   @id @default(cuid())
+  serviceId String
+  service   Service  @relation(fields: [serviceId], references: [id], onDelete: Cascade)
+
+  createdAt DateTime @default(now())
+  level     AlertLevel
+  message   String
+  isActive  Boolean  @default(true)
+
+  @@index([serviceId, createdAt])
+}
+
+enum AlertLevel {
+  warning
+  critical
+}
