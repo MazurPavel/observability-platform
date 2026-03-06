@@ -12,24 +12,6 @@ The platform generates synthetic metrics for multiple services and visualizes th
 
 ---
 
-## Dashboard Overview
-
-![Dashboard](screenshots/dashboard-overview.png)
-
----
-
-## Incident Simulation
-
-![Incident](screenshots/incident-simulation.png)
-
----
-
-## Metrics Charts
-
-![Metrics](screenshots/metrics-charts.png)
-
----
-
 # Features
 
 • Real-time service monitoring  
@@ -60,6 +42,12 @@ The platform generates synthetic metrics for multiple services and visualizes th
 ### Infrastructure
 - Docker
 - Docker Compose
+
+---
+
+## Dashboard Overview
+
+![Dashboard](screenshots/dashboard-overview.png)
 
 ---
 
