@@ -1,8 +1,8 @@
 # Infrastructure Observability Platform
 
-A full-stack observability dashboard that simulates real-time infrastructure monitoring.
+A full-stack observability platform that allows users to monitor simulated infrastructure metrics, trigger incident scenarios, and analyze system behavior through interactive dashboards.
 
-The platform generates synthetic metrics for multiple services and visualizes their health status, performance metrics, and incidents through an interactive monitoring dashboard.
+The system generates synthetic metrics for multiple services and visualizes their health status, performance trends, and operational incidents in real time. Users can explore service-level metrics, investigate anomalies, and observe how simulated failures affect system behavior.
 
 ---
 
