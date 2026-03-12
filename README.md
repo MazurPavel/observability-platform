@@ -1,5 +1,4 @@
 # Infrastructure Observability Platform
-# Infrastructure Observability Platform
 
 ![Docker](https://img.shields.io/badge/docker-ready-blue)
 ![FastAPI](https://img.shields.io/badge/backend-FastAPI-green)

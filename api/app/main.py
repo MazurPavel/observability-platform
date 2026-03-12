@@ -11,6 +11,7 @@ from pydantic import BaseModel
 DATABASE_URL = os.getenv("DATABASE_URL", "")
 INTERVAL = int(os.getenv("METRICS_INTERVAL_SECONDS", "3"))
 SERVICES_COUNT = int(os.getenv("SEED_SERVICES_COUNT", "8"))
+CORS_ORIGINS = os.getenv("CORS_ORIGINS", "http://localhost:3000").split(",")
 
 db = Prisma()
 
@@ -18,9 +19,7 @@ app = FastAPI(title="Observability API", version="0.1.0")
 
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=[
-        "http://localhost:3000",
-    ],
+    allow_origins=CORS_ORIGINS,
     allow_credentials=True,
     allow_methods=["*"],
     allow_headers=["*"],
