@@ -1,4 +1,11 @@
 # Infrastructure Observability Platform
+# Infrastructure Observability Platform
+
+![Docker](https://img.shields.io/badge/docker-ready-blue)
+![FastAPI](https://img.shields.io/badge/backend-FastAPI-green)
+![Next.js](https://img.shields.io/badge/frontend-Next.js-black)
+![PostgreSQL](https://img.shields.io/badge/database-PostgreSQL-blue)
+![License](https://img.shields.io/badge/license-MIT-green)
 
 A full-stack observability platform that allows users to monitor simulated infrastructure metrics, trigger incident scenarios, and analyze system behavior through interactive dashboards.
 
@@ -51,7 +58,7 @@ The system generates synthetic metrics for multiple services and visualizes thei
 
 ## Dashboard Overview
 
-![Dashboard](screenshots/dashboard.png)
+![Dashboard](screenshots/dashboard-overview.png)
 
 ---
 
